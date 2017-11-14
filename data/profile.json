@@ -1,0 +1,101 @@
+{
+	"firstname"   : "John",
+	"name"        : "Doe",
+
+	"picture"     : "images/profile.png",
+	"email"       : "john.doe@email.com",
+	"phone"       : "+01 (0)01\u20112345\u20116789",
+	"address"     : "Address line",
+	"city"        : "City",
+	"zipcode"     : "012\u20133456",
+	"country"     : "Country",
+
+	"linkedin"    : "linkedin.com/in/john-doe",
+	"github"      : "github.com/johndoe",
+
+	"description" : "Current Position",
+	"summary"     : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit elit vitae egestas ornare. Sed sem quam, commodo in accumsan sed, eleifend vel nulla. Nullam non pulvinar enim. Pellentesque mi ligula, viverra et enim quis, sollicitudin pellentesque lorem.",
+
+	"education"   : [
+		{
+			"name"       : "Degree 1",
+			"university" : "University 1",
+			"location"   : "City, Country",
+			"grade"      : "grade",
+			"start"      : "1990",
+			"end"        : "1992"
+		},
+		{
+			"name"       : "Degree 2",
+			"university" : "University 2",
+			"location"   : "City, Country",
+			"grade"      : "no honors",
+			"start"      : "1980",
+			"end"        : "1983"
+		}
+	],
+
+	"languages"   : [
+		{
+			"name"  : "LanguageA",
+			"level" : "Native language"
+		},
+		{
+			"name"  : "LanguageB",
+			"level" : "Fluent (Test score in 1900: 0/1000)"
+		}
+	],
+
+	"interests"   : [
+		"Hobby1",
+		"Hobby2",
+		"Hobby3",
+		"Hobby4",
+		"Hobby5"
+	],
+
+	"experiences" : [
+		{
+			"name"     : "Position1",
+			"company"  : "Company1",
+			"location" : "Location1",
+			"start"    : "January 1971",
+			"end"      : "",
+			"details"  : [
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+				"Maecenas blandit elit vitae egestas ornare."
+			]
+		},
+		{
+			"name"     : "Position2",
+			"company"  : "Company2",
+			"location" : "France",
+			"start"    : "January 1970",
+			"end"      : "January 1971",
+			"details"  : [
+				"Sed sem quam, commodo in accumsan sed, eleifend vel nulla.",
+				"Nullam non pulvinar enim.",
+				"Pellentesque mi ligula, viverra et enim quis, sollicitudin pellentesque lorem."
+			]
+		}
+	],
+
+	"skills"      : [
+		{
+			"name"  : "Category 1",
+			"items" : [
+				"Skill 1-1",
+				"Skill 1-2",
+				"Skill 1-3"
+			]
+		},
+		{
+			"name"  : "Category 2",
+			"items" : [
+				"Skill 2-1",
+				"Skill 2-2",
+				"Skill 2-3"
+			]
+		}
+	]
+}
