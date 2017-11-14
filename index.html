@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Meta -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Page information -->
+		<title>Resume</title>
+		<link rel="shortcut icon" href="">
+		<meta name="description"  content="Resume">
+		<meta name="keywords"     content="Resume">
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic" type="text/css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="wrapper" data-ng-app="resumeApp" data-ng-controller="resumeCtrl">
+			<!-- Sidebar -->
+			<aside class="sb-wrapper">
+				<!-- Profile -->
+				<div class="sb-profile">
+					<img class="pf-picture" src="{{picture}}" alt="Picture"/>
+					<h1  class="pf-name">{{firstname}} {{name}}</h1>
+					<h2  class="pf-desc">{{description}}</h2>
+				</div>
+
+				<!-- Contact Information -->
+				<div class="sb-block sb-contact">
+					<ul class="list-unstyled sb-list">
+						<li class="sb-item ct-address">
+							<span class="fa fa-home"></span>{{address}}<br/>
+							<span class="fa"        ></span>{{city}} {{zipcode}}, <span class="ct-country">{{country}}</span>
+						</li>
+						<li class="sb-item ct-email"   ><span class="fa fa-envelope"></span><a href="mailto: {{email}}">{{email}}</a></li>
+						<li class="sb-item ct-phone"   ><span class="fa fa-phone"   ></span><a href="tel:{{phone}}"    >{{phone}}</a></li>
+						<li class="sb-item ct-linkedin"><span class="fa fa-linkedin"></span><a href="http://{{linkedin}}" target="_blank">{{linkedin}}</a></li>
+						<li class="sb-item ct-github"  ><span class="fa fa-github"  ></span><a href="http://{{github}}"   target="_blank">{{github}}</a></li>
+					</ul>
+				</div>
+
+				<!-- Education -->
+				<div class="sb-block sb-education">
+					<h2 class="sb-title">Education</h2>
+					<div class="sb-list">
+						<div class="sb-item" data-ng-repeat="e in education">
+							<h4  class="ed-degree">{{e.name}}</h4>
+							<h5  class="sb-desc ed-place">{{e.university}}, <span>{{e.location}}</span></h5>
+							<div class="sb-desc ed-date" data-ng-if="!e.end">Since {{e.start}}</div>
+							<div class="sb-desc ed-date" data-ng-if="e.end" >{{e.start}} &ndash; {{e.end}}</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Languages -->
+				<div class="sb-block sb-languages">
+					<h2 class="sb-title">Languages</h2>
+					<ul class="list-unstyled sb-list">
+						<li class="sb-item" data-ng-repeat="l in languages">{{l.name}}: <span class="sb-desc">{{l.level}}</span></li>
+					</ul>
+				</div>
+
+				<!-- Interests -->
+				<div class="sb-block sb-interests">
+					<h2 class="sb-title">Interests</h2>
+					<ul class="list-unstyled sb-list">
+						<li class="sb-item" data-ng-repeat="i in interests">{{i}}</li>
+					</ul>
+				</div>
+			</aside>
+
+			<!-- Main content -->
+			<main class="mn-wrapper">
+				<!-- Summary -->
+				<section class="mn-block mn-summary">
+					<h2  class="mn-title"><span class="fa fa-user"></span>Career Profile</h2>
+					<div class="mn-text">{{summary}}</div>
+				</section>
+
+				<!-- Working experiences -->
+				<section class="mn-block mn-experiences">
+					<h2  class="mn-title"><span class="fa fa-briefcase"></span>Working Experiences</h2>
+					<div class="mn-list">
+						<div class="mn-item" data-ng-repeat="e in experiences">
+							<div class="exp-meta">
+								<h4  class="mn-name exp-name">{{e.name}}</h4>
+								<div class="mn-desc exp-date" data-ng-if="!e.end">Since {{e.start}}</div>
+								<div class="mn-desc exp-date" data-ng-if="e.end" >{{e.start}} &ndash; {{e.end}}</div>
+								<h5  class="mn-desc exp-company">{{e.company}}, <span>{{e.location}}</span></h5>
+							</div>
+							<div class="exp-details">
+								<div class="mn-text exp-detail" data-ng-repeat="d in e.details">{{d}}</div>
+							<div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Skills -->
+				<section class="mn-block mn-skills">
+					<h2 class="mn-title"><span class="fa fa-cog"></span>Skills &amp; Proficiency</h2>
+					<div class="mn-list">
+						<div class="mn-item" data-ng-repeat="s in skills">
+							<h4 class="mn-name sk-name">{{s.name}}</h4>
+							<ul class="list-inline sk-items">
+								<li class="sk-item" data-ng-repeat="i in s.items">{{i}}</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+
+		<!-- Scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
