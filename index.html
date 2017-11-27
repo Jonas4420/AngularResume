@@ -15,7 +15,7 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic" type="text/css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet/less" href="css/style.less">
 	</head>
 	<body>
 		<div class="wrapper" data-ng-app="resumeApp" data-ng-controller="resumeCtrl">
@@ -48,7 +48,7 @@
 					<div class="sb-list">
 						<div class="sb-item" data-ng-repeat="e in education">
 							<h4  class="ed-degree">{{e.name}}</h4>
-							<h5  class="sb-desc ed-place">{{e.university}}, <span>{{e.location}}</span></h5>
+							<h5  class="sb-desc ed-place">{{e.university}}, <span class="sb-country">{{e.country}}</span></h5>
 							<div class="sb-desc ed-date" data-ng-if="!e.end">Since {{e.start}}</div>
 							<div class="sb-desc ed-date" data-ng-if="e.end" >{{e.start}} &ndash; {{e.end}}</div>
 						</div>
@@ -89,11 +89,11 @@
 								<h4  class="mn-name exp-name">{{e.name}}</h4>
 								<div class="mn-desc exp-date" data-ng-if="!e.end">Since {{e.start}}</div>
 								<div class="mn-desc exp-date" data-ng-if="e.end" >{{e.start}} &ndash; {{e.end}}</div>
-								<h5  class="mn-desc exp-company">{{e.company}}, <span>{{e.location}}</span></h5>
+								<h5  class="mn-desc exp-company">{{e.company}}, <span class="exp-location">{{e.location}}</span></h5>
 							</div>
 							<div class="exp-details">
 								<div class="mn-text exp-detail" data-ng-repeat="d in e.details">{{d}}</div>
-							<div>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -116,5 +116,6 @@
 		<!-- Scripts -->
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 		<script src="js/script.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
 	</body>
 </html>
