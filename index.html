@@ -33,7 +33,7 @@
 					<ul class="list-unstyled sb-list">
 						<li class="sb-item ct-address">
 							<span class="fa fa-home"></span>{{address}}<br/>
-							<span class="fa"        ></span>{{city}} {{zipcode}}, <span class="ct-country">{{country}}</span>
+							<span class="fa"        ></span>{{city}}, <span class="ct-country">{{country}}</span>
 						</li>
 						<li class="sb-item ct-email"   ><span class="fa fa-envelope"></span><a href="mailto: {{email}}">{{email}}</a></li>
 						<li class="sb-item ct-phone"   ><span class="fa fa-phone"   ></span><a href="tel:{{phone}}"    >{{phone}}</a></li>
@@ -47,7 +47,7 @@
 					<h2 class="sb-title">Education</h2>
 					<div class="sb-list">
 						<div class="sb-item" data-ng-repeat="e in education">
-							<h4  class="ed-degree">{{e.name}}</h4>
+							<h4  class="ed-degree">{{e.name}}<span class="ed-grade">, {{e.grade}}</span></h4>
 							<h5  class="sb-desc ed-place">{{e.university}}, <span class="sb-country">{{e.country}}</span></h5>
 							<div class="sb-desc ed-date" data-ng-if="!e.end">Since {{e.start}}</div>
 							<div class="sb-desc ed-date" data-ng-if="e.end" >{{e.start}} &ndash; {{e.end}}</div>
@@ -59,7 +59,7 @@
 				<div class="sb-block sb-languages">
 					<h2 class="sb-title">Languages</h2>
 					<ul class="list-unstyled sb-list">
-						<li class="sb-item" data-ng-repeat="l in languages">{{l.name}}: <span class="sb-desc">{{l.level}}</span></li>
+						<li class="sb-item sb-lang" data-ng-repeat="l in languages">{{l.name}}: <span class="sb-desc">{{l.level}}</span></li>
 					</ul>
 				</div>
 

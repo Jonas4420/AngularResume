@@ -1,0 +1,5 @@
+1. Add skill bars on skills
+2. Set same layout as PDF
+3. Refactoring of LESS style
+4. Script to create LaTeX from JSON
+5. Makefile LaTeX
