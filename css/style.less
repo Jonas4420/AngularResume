@@ -1,0 +1,294 @@
+/******************************************************************************/
+/* Constants 
+/******************************************************************************/
+@dark-grey:  #222022;
+@grey:  	 #CECCCE;
+@light-grey: #F5F3F5;
+@white:      #EFEDEF;
+@green:      #6EAD3A;
+
+@min-height: 800px;	
+@max-width: 960px;
+
+@sb-margin: 30px;
+@sb-width: 300px;
+
+@mn-margin: 30px;
+
+/******************************************************************************/
+/* Page
+/******************************************************************************/
+body {
+	font-family: "Roboto", sans-serif;
+	font-size: 14px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	padding: @mn-margin;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+}
+
+.wrapper {
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+	position: relative;
+	max-width: @max-width;
+	margin: 0 auto;
+}
+
+/******************************************************************************/
+/* Sidebar
+/******************************************************************************/
+.sb-wrapper {
+	background: @dark-grey;
+	color: @white;
+
+	position: absolute;
+	left: 0px;
+	height: 100%;
+	min-height: @min-height;
+	width: @sb-width;
+	
+	a {
+		color: @white;
+	}
+	
+	.sb-block {
+		padding: @sb-margin @sb-margin 0px @sb-margin;
+		
+		.sb-title {
+			font-size: 16px;
+			font-weight: 700;
+			text-transform: uppercase;
+
+			margin-top: 0px;
+			margin-bottom: @sb-margin;
+		}
+		
+		.sb-list {
+			margin: 0px;
+			
+			.sb-item {
+				margin-bottom: 10px;
+				&:last-child { margin-bottom: 0px; }
+			}
+		}
+		
+		.sb-desc {
+			color: @grey;
+		}
+	}
+	
+	.sb-profile {
+		background: rgba(0, 0, 0, 0.2);
+		color: @white;
+		text-align: center;
+
+		padding: @sb-margin;
+		
+		.pf-picture {
+			border-radius: 50%;
+			border: 3px solid @white;
+			
+			height: 150px;
+			width: 150px;
+			margin-bottom: 15px;
+		}
+		
+		.pf-name {
+			font-size: 32px;
+			font-weight: 900;
+
+			margin-top: 0px;
+			margin-bottom: 10px;
+		}
+		
+		.pf-desc {
+			color: rgba(255, 255, 255, 0.75);
+			font-size: 18px;
+			font-weight: 400;
+
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
+	}
+	
+	.sb-contact {
+		.fa {
+			line-height:20px;
+			width:20px;
+			font-size: 18px;
+			text-align: left;
+			vertical-align: middle;
+		}
+		
+		.ct-country {
+			font-variant: small-caps;
+		}
+		
+		.fa-envelope {
+			font-size: 14px;
+		}
+	}
+
+	.sb-education {
+		.ed-degree {
+			font-size: 14px;
+			margin-top: 0px;
+			margin-bottom: 5px;
+		}
+		
+		.sb-desc {
+			font-weight: 500;
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
+		
+		.ed-date {
+			font-style: italic;
+		}
+		
+		.ed-place .sb-country {
+			font-variant: small-caps;
+		}
+	}
+
+	.sb-languages {
+		.sb-desc {
+			font-style: italic;
+		}
+	}
+}
+
+/******************************************************************************/
+/* Main Content
+/******************************************************************************/
+.mn-wrapper {
+	background: @light-grey;
+	color: @dark-grey;
+
+	padding: @mn-margin;
+	padding-left: @sb-width + @mn-margin;
+	height: 100%;
+	min-height: @min-height;
+	
+	.mn-block {
+		margin-bottom: @mn-margin;
+		
+		.mn-title {
+			color: @dark-grey;
+			font-size: 20px;
+			font-weight: 500;
+			text-transform: uppercase;
+
+			position: relative;
+			margin-top: 0px;
+			margin-bottom: @mn-margin;
+			
+			.fa {
+				width: 32px;
+				line-height: @mn-margin;
+				text-align: center;
+				display: inline-block;
+				border: 1px solid @white;
+				border-radius: 50%;
+
+				color: @light-grey;
+				background: @green;
+
+				margin-right: 4px;
+				background-clip: padding-box;
+				font-size: 16px;
+
+				position: relative;
+			}
+		}
+		
+		.mn-item {
+			margin-bottom: @mn-margin;
+			&:last-child { margin-bottom: 0px; }
+		}
+		
+		.mn-text {
+			text-align: justify;
+			text-justify: inter-word;
+		}
+		
+		.mn-name {
+			color: @dark-grey;
+			font-size: 16px;
+			font-weight: 500;
+
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
+		
+		.mn-desc {
+			color: #4C4947;
+		}
+	}
+}
+
+/* Working Experiences */
+.mn-experiences {
+	.exp-meta {
+		position: relative;
+		overflow: hidden;
+		margin-bottom: 2px;
+		
+		.exp-date {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			font-style: italic;
+		}
+		
+		.exp-location {
+			font-variant: small-caps;
+		}
+	}
+	.exp-details {
+		.exp-detail {
+			margin-bottom: 0px;
+		}
+	}
+}
+
+/* Skills */
+
+.sk-items {
+	.sk-item:not(:last-child):after {
+		content: "\2022";
+		padding-left: 10px;
+	}
+
+	.sk-item:last-child:after {
+		content: "";
+	}
+}
+
+/*
+.skillset .item {
+	margin-bottom: 15px;
+	overflow: hidden;
+}
+
+.skillset .level-title {
+	font-size: 14px;
+	margin-top: 0;
+	margin-bottom: 12px;
+}
+
+.skillset .level-bar {
+	height: 12px;
+	background: #f5f5f5;
+}
+
+.skillset .level-bar-inner {
+	height: 12px;
+	background: #7bc2d3;
+}
+*/
