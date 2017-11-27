@@ -1,6 +1,6 @@
 # AngularResume
 
-Credit to:
+Credits to:
 * https://github.com/xriley/Orbit-Theme
 * https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex
 
