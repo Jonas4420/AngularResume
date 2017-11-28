@@ -80,6 +80,21 @@
 		}
 	],
 
+	"programming" : [
+		{
+			"name": "A",
+			"level": 10
+		},
+		{
+			"name": "B",
+			"level": 50
+		},
+		{
+			"name": "C",
+			"level": 100
+		}
+	],
+
 	"skills"      : [
 		{
 			"name"  : "Category 1",

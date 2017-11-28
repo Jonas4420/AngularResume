@@ -5,6 +5,7 @@
 @light-grey: #EFEDEF;
 @dark-grey:  #222022;
 @grey:       #CECCCE;
+@black:      #1B1A1B;
 @green:      #6EAD3A;
 
 @min-height: 297mm;	
@@ -24,7 +25,6 @@
 /******************************************************************************/
 body {
 	font-family: "Roboto", sans-serif;
-	font-size: 14px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
@@ -32,7 +32,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-weight: 500;
+	font-weight: bold;
 }
 
 .wrapper {
@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 
 	position: relative;
 	max-width: @max-width;
-	margin: 0 auto;
+	margin: 0pt auto;
 }
 
 /******************************************************************************/
@@ -87,7 +87,6 @@ h1, h2, h3, h4, h5, h6 {
 		.pf-desc {
 			color: rgba(255, 255, 255, 0.75);
 			font-size: 16px;
-			font-weight: 400;
 
 			margin-top: 0px;
 			margin-bottom: 0px;
@@ -113,7 +112,6 @@ h1, h2, h3, h4, h5, h6 {
 
 		.sb-item {
 			font-size: 13px;
-			font-weight: 400;
 			margin-bottom: @cv-space;
 			&:last-child { margin-bottom: 0px; }
 		}
@@ -157,13 +155,12 @@ h1, h2, h3, h4, h5, h6 {
 
 		.ed-grade {
 			font-size: 14px;
-			font-weight: 400;
 			color: @grey;
 			font-style: italic;
 		}
 		
 		.sb-desc {
-			font-weight: 500;
+			font-weight: bold;
 			margin-top: 0px;
 			margin-bottom: 0px;
 		}
@@ -185,7 +182,7 @@ h1, h2, h3, h4, h5, h6 {
 		}
 
 		.sb-desc {
-			font-weight: 500;
+			font-weight: bold;
 			font-size: 12px;
 			color: @grey;
 			font-style: italic;
@@ -206,17 +203,17 @@ h1, h2, h3, h4, h5, h6 {
 	min-height: @min-height;
 	
 	.mn-block {
-		margin-bottom: @mn-margin;
+		margin-bottom: 0.50cm;
 		
 		.mn-title {
 			color: @dark-grey;
 			font-size: 20px;
-			font-weight: 500;
+			font-weight: bold;
 			text-transform: uppercase;
 
 			position: relative;
 			margin-top: 0px;
-			margin-bottom: @mn-margin;
+			margin-bottom: 0.20cm;
 			
 			.fa {
 				width: 32px;
@@ -238,11 +235,12 @@ h1, h2, h3, h4, h5, h6 {
 		}
 		
 		.mn-item {
-			margin-bottom: @mn-margin;
+			margin-bottom: @cv-space;
 			&:last-child { margin-bottom: 0px; }
 		}
 		
 		.mn-text {
+			line-height: 1.2;
 			text-align: justify;
 			text-justify: inter-word;
 		}
@@ -250,7 +248,7 @@ h1, h2, h3, h4, h5, h6 {
 		.mn-name {
 			color: @dark-grey;
 			font-size: 16px;
-			font-weight: 500;
+			font-weight: bold;
 
 			margin-top: 0px;
 			margin-bottom: 0px;
@@ -276,13 +274,30 @@ h1, h2, h3, h4, h5, h6 {
 			font-style: italic;
 		}
 		
+		.exp-company {
+			margin-top: @cv-smallspace;
+			margin-bottom: @cv-space;
+		}
+
 		.exp-location {
 			font-variant: small-caps;
 		}
 	}
+
 	.exp-details {
+		margin: 0px;
+		padding: 0px;
+
+		.exp-detail:before {
+			content: "\2022";
+			display: table-cell;
+			padding-right: 3pt;
+		}
+
 		.exp-detail {
 			margin-bottom: 0px;
+			list-style: none;
+			display: table-row;
 		}
 	}
 }
@@ -300,25 +315,34 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-/*
-.skillset .item {
-	margin-bottom: 15px;
-	overflow: hidden;
-}
+.sk-prgm {
+	margin-bottom: 10px;
 
-.skillset .level-title {
-	font-size: 14px;
-	margin-top: 0;
-	margin-bottom: 12px;
-}
+	&:before {
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		height: 100%;
+	}
 
-.skillset .level-bar {
-	height: 12px;
-	background: #f5f5f5;
-}
+	.pg-name {
+		display: inline-block;
+		vertical-align: middle;
+		width: 8%;
+	}
+	
+	.pg-total {
+		display: inline-block;
+		vertical-align: middle;
+		height: 0.25cm;
+		background-color: @grey;
+		outline:1px solid @black;
+		width: 90%;
 
-.skillset .level-bar-inner {
-	height: 12px;
-	background: #7bc2d3;
+		.pg-level {
+			height: 0.25cm;
+			background-color: @green;
+			outline:1px solid @black;
+		}
+	}
 }
-*/

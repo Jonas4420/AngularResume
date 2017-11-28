@@ -1,5 +1,6 @@
-1. Add skill bars on skills
-2. Set same layout as PDF
-3. Refactoring of LESS style
-4. Script to create LaTeX from JSON
-5. Makefile LaTeX
+1. Set same layout as PDF
+	+ same colors
+	+ spacing between titles
+2. Refactoring of LESS style
+3. Script to create LaTeX from JSON
+4. Makefile LaTeX
