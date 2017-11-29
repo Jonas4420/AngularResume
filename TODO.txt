@@ -1,6 +1,2 @@
-1. Set same layout as PDF
-	+ same colors
-	+ spacing between titles
-2. Refactoring of LESS style
-3. Script to create LaTeX from JSON
-4. Makefile LaTeX
+1. Refactoring of LESS style
+2. Script to create LaTeX from JSON

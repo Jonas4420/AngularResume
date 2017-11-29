@@ -48,9 +48,9 @@
 					<div class="sb-list">
 						<div class="sb-item" data-ng-repeat="e in education">
 							<h4  class="ed-degree">{{e.name}}<span class="ed-grade">, {{e.grade}}</span></h4>
-							<h5  class="sb-desc ed-place">{{e.university}}, <span class="sb-country">{{e.country}}</span></h5>
-							<div class="sb-desc ed-date" data-ng-if="!e.end">Since {{e.start}}</div>
-							<div class="sb-desc ed-date" data-ng-if="e.end" >{{e.start}} &ndash; {{e.end}}</div>
+							<h5  class="ed-place">{{e.university}}, <span class="sb-country">{{e.country}}</span></h5>
+							<div class="ed-date" data-ng-if="!e.end">Since {{e.start}}</div>
+							<div class="ed-date" data-ng-if="e.end" >{{e.start}} &ndash; {{e.end}}</div>
 						</div>
 					</div>
 				</div>
@@ -87,9 +87,9 @@
 						<div class="mn-item" data-ng-repeat="e in experiences">
 							<div class="exp-meta">
 								<h4  class="mn-name exp-name">{{e.name}}</h4>
-								<div class="mn-desc exp-date" data-ng-if="!e.end">Since {{e.start}}</div>
-								<div class="mn-desc exp-date" data-ng-if="e.end" >{{e.start}} &ndash; {{e.end}}</div>
-								<h5  class="mn-desc exp-company">{{e.company}}, <span class="exp-location">{{e.location}}</span></h5>
+								<div class="exp-date" data-ng-if="!e.end">Since {{e.start}}</div>
+								<div class="exp-date" data-ng-if="e.end" >{{e.start}} &ndash; {{e.end}}</div>
+								<h5  class="exp-company">{{e.company}}, <span class="exp-location">{{e.location}}</span></h5>
 							</div>
 							<ul class="exp-details">
 								<li class="mn-text exp-detail" data-ng-repeat="d in e.details">{{d}}</li>

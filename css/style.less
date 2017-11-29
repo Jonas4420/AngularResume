@@ -3,22 +3,29 @@
 /******************************************************************************/
 @white:      #F5F3F5;
 @light-grey: #EFEDEF;
-@dark-grey:  #222022;
 @grey:       #CECCCE;
+@dark-grey:  #222022;
 @black:      #1B1A1B;
 @green:      #6EAD3A;
 
-@min-height: 297mm;	
-@max-width: 210mm;
+@cv-height: 297mm;	
+@cv-width: 210mm;
 
-@sb-margin: 6mm;
-@sb-title-margin: 7mm;
-@sb-width: 70mm;
+@sb-width: 7cm;
+@sb-title-margin: 0.75cm;
 
-@mn-margin: 30px;
+@sb-margin: 0.5cm;
+@mn-margin: 0.75cm;
 
+@picture-size: 130px;
 @cv-space: 7pt;
 @cv-smallspace: 3pt;
+
+@font-huge: 25px;
+@font-Large: 18px;
+@font-large: 16px;
+@font-normal: 14px;
+@font-small: 13px;
 
 /******************************************************************************/
 /* Page
@@ -29,6 +36,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 
 	padding: @mn-margin;
+	color: @black;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -36,11 +44,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wrapper {
-	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 2px 4px @black;
 
 	position: relative;
-	max-width: @max-width;
-	margin: 0pt auto;
+	max-width: @cv-width;
+	margin: 0px auto;
 }
 
 /******************************************************************************/
@@ -53,40 +61,41 @@ h1, h2, h3, h4, h5, h6 {
 	position: absolute;
 	left: 0px;
 	height: 100%;
-	min-height: @min-height;
+	min-height: @cv-height;
 	width: @sb-width;
 	
 	a {
-		color: @light-grey;
+		color: @grey;
 	}
 
 	.sb-profile {
-		background: rgba(0, 0, 0, 0.2);
-		color: @white;
+		background: @black;
 		text-align: center;
 
 		padding: @sb-margin;
 		
 		.pf-picture {
 			border-radius: 50%;
-			border: 3px solid @light-grey;
+			border: 3px solid @white;
 			
-			height: 130px;
-			width: 130px;
-			margin-bottom: 5mm;
+			height: @picture-size;
+			width: @picture-size;
+			margin-bottom: 0.5cm;
 		}
 		
 		.pf-name {
-			font-size: 25px;
-			font-weight: 700;
+			color: @white;
+			font-size: @font-huge;
+			font-weight: bold;
 
 			margin-top: 0px;
-			margin-bottom: 2mm;
+			margin-bottom: 0.2cm;
 		}
 		
 		.pf-desc {
-			color: rgba(255, 255, 255, 0.75);
-			font-size: 16px;
+			color: @grey;
+			font-size: @font-large;
+			font-weight: normal;
 
 			margin-top: 0px;
 			margin-bottom: 0px;
@@ -97,8 +106,8 @@ h1, h2, h3, h4, h5, h6 {
 		padding: 0px @sb-margin 0px @sb-margin;
 		
 		.sb-title {
-			font-size: 18px;
-			font-weight: 700;
+			font-size: @font-Large;
+			font-weight: bold;
 			text-transform: uppercase;
 
 			margin-top: @sb-title-margin;
@@ -107,17 +116,13 @@ h1, h2, h3, h4, h5, h6 {
 		
 		.sb-list {
 			margin: 0px;
-			
 		}
 
 		.sb-item {
-			font-size: 13px;
-			margin-bottom: @cv-space;
+			font-size: @font-normal;
+			margin-bottom: @cv-smallspace;
+
 			&:last-child { margin-bottom: 0px; }
-		}
-		
-		.sb-desc {
-			color: @grey;
 		}
 	}
 	
@@ -125,9 +130,11 @@ h1, h2, h3, h4, h5, h6 {
 		padding: @sb-margin @sb-margin 0px @sb-margin;
 
 		.fa {
-			line-height:20px;
-			width:20px;
-			font-size: 14px;
+			@sb-fa-size: 20px;
+			line-height: @sb-fa-size;
+			width: @sb-fa-size;
+
+			font-size: @font-normal;
 			text-align: left;
 			vertical-align: middle;
 		}
@@ -141,51 +148,59 @@ h1, h2, h3, h4, h5, h6 {
 		}
 		
 		.fa-envelope {
-			font-size: 12px;
+			font-size: @font-normal - 2pt;
 		}
 	}
 
 	.sb-education {
 		.ed-degree {
-			font-size: 14px;
-			font-weight: 700;
+			color: @white;
+			font-weight: bold;
+			font-size: @font-normal;
+
 			margin-top: 0px;
 			margin-bottom: @cv-smallspace;
-		}
 
-		.ed-grade {
-			font-size: 14px;
-			color: @grey;
-			font-style: italic;
+			.ed-grade {
+				color: @grey;
+				font-style: italic;
+				font-weight: normal
+			}
 		}
 		
-		.sb-desc {
-			font-weight: bold;
+		.ed-place {
+			color: @grey;
+			font-weight: normal;
+
 			margin-top: 0px;
 			margin-bottom: 0px;
+
+			.sb-country {
+				font-variant: small-caps;
+			}
 		}
-		
+
 		.ed-date {
+			color: @grey;
 			font-style: italic;
-		}
-		
-		.ed-place .sb-country {
-			font-variant: small-caps;
+
+			margin-top: 0px;
+			margin-bottom: 0px;
 		}
 	}
 
 	.sb-languages {
 		.sb-lang {
-			font-weight: 700;
-			font-size: 13px;
 			color: @white;
+			font-weight: bold;
+			font-size: @font-normal;
 		}
 
 		.sb-desc {
-			font-weight: bold;
-			font-size: 12px;
 			color: @grey;
+			font-weight: normal;
 			font-style: italic;
+			font-size: @font-small;
 		}
 	}
 }
@@ -195,32 +210,35 @@ h1, h2, h3, h4, h5, h6 {
 /******************************************************************************/
 .mn-wrapper {
 	background: @white;
-	color: @dark-grey;
 
 	padding: @mn-margin;
 	padding-left: @sb-width + @mn-margin;
+
 	height: 100%;
-	min-height: @min-height;
-	
+	min-height: @cv-height;
+
 	.mn-block {
-		margin-bottom: 0.50cm;
-		
+		&:first-child {
+			.mn-title:first-child {
+				margin-top: 0px;
+			}
+		}
+
 		.mn-title {
-			color: @dark-grey;
-			font-size: 20px;
+			font-size: @font-Large;
 			font-weight: bold;
 			text-transform: uppercase;
 
 			position: relative;
-			margin-top: 0px;
-			margin-bottom: 0.20cm;
-			
+			margin-top: 0.5cm;
+			margin-bottom: 0.5cm;
+
+
 			.fa {
 				width: 32px;
 				line-height: @mn-margin;
 				text-align: center;
 				display: inline-block;
-				border: 1px solid @light-grey;
 				border-radius: 50%;
 
 				color: @white;
@@ -228,121 +246,125 @@ h1, h2, h3, h4, h5, h6 {
 
 				margin-right: 4px;
 				background-clip: padding-box;
-				font-size: 16px;
+				font-size: @font-large;
 
 				position: relative;
 			}
 		}
-		
+
 		.mn-item {
 			margin-bottom: @cv-space;
 			&:last-child { margin-bottom: 0px; }
 		}
-		
+
 		.mn-text {
 			line-height: 1.2;
 			text-align: justify;
 			text-justify: inter-word;
 		}
-		
+
 		.mn-name {
-			color: @dark-grey;
-			font-size: 16px;
+			color: @black;
+			font-size: @font-large;
 			font-weight: bold;
 
 			margin-top: 0px;
 			margin-bottom: 0px;
 		}
-		
-		.mn-desc {
-			color: #4C4947;
-		}
-	}
-}
-
-/* Working Experiences */
-.mn-experiences {
-	.exp-meta {
-		position: relative;
-		overflow: hidden;
-		margin-bottom: 2px;
-		
-		.exp-date {
-			position: absolute;
-			top: 0px;
-			right: 0px;
-			font-style: italic;
-		}
-		
-		.exp-company {
-			margin-top: @cv-smallspace;
-			margin-bottom: @cv-space;
-		}
-
-		.exp-location {
-			font-variant: small-caps;
-		}
 	}
 
-	.exp-details {
-		margin: 0px;
-		padding: 0px;
+	/* Working Experiences */
+	.mn-experiences {
+		.exp-meta {
+			position: relative;
+			overflow: hidden;
+			margin-bottom: @cv-smallspace;
 
-		.exp-detail:before {
-			content: "\2022";
-			display: table-cell;
-			padding-right: 3pt;
+			.exp-date {
+				font-size: @font-normal;
+				color: @black;
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				font-style: italic;
+			}
+
+			.exp-company {
+				font-size: @font-normal;
+				font-weight: bold;
+				color: @dark-grey;
+				margin-top: @cv-smallspace;
+				margin-bottom: @cv-space;
+			}
+
+			.exp-location {
+				font-weight: bold;
+				color: @dark-grey;
+				font-variant: small-caps;
+			}
 		}
 
-		.exp-detail {
-			margin-bottom: 0px;
-			list-style: none;
-			display: table-row;
+		.exp-details {
+			margin: 0px;
+			padding: 0px;
+
+			.exp-detail {
+				&:before {
+					content: "\2022";
+					display: table-cell;
+					padding-right: @cv-smallspace;
+				}
+
+				margin-bottom: 0px;
+				list-style: none;
+				display: table-row;
+			}
 		}
 	}
-}
 
-/* Skills */
+	/* Skills */
+	.mn-skills {
+		.sk-items {
+			.sk-item:not(:last-child):after {
+				content: "\2022";
+				padding-left: 10px;
+			}
 
-.sk-items {
-	.sk-item:not(:last-child):after {
-		content: "\2022";
-		padding-left: 10px;
-	}
+			.sk-item:last-child:after {
+				content: "";
+			}
+		}
 
-	.sk-item:last-child:after {
-		content: "";
-	}
-}
+		.sk-prgm {
+			margin-bottom: @cv-smallspace;
 
-.sk-prgm {
-	margin-bottom: 10px;
+			&:before {
+				content: "";
+				display: inline-block;
+				vertical-align: middle;
+				height: 100%;
+			}
 
-	&:before {
-		content: "";
-		display: inline-block;
-		vertical-align: middle;
-		height: 100%;
-	}
+			.pg-name {
+				display: inline-block;
+				vertical-align: middle;
+				width: 8%;
+			}
 
-	.pg-name {
-		display: inline-block;
-		vertical-align: middle;
-		width: 8%;
-	}
-	
-	.pg-total {
-		display: inline-block;
-		vertical-align: middle;
-		height: 0.25cm;
-		background-color: @grey;
-		outline:1px solid @black;
-		width: 90%;
+			.pg-total {
+				display: inline-block;
+				vertical-align: middle;
+				height: 0.25cm;
+				background-color: @grey;
+				outline: 1px solid @black;
+				width: 90%;
 
-		.pg-level {
-			height: 0.25cm;
-			background-color: @green;
-			outline:1px solid @black;
+				.pg-level {
+					height: 0.25cm;
+					background-color: @green;
+					outline: 1px solid @black;
+				}
+			}
 		}
 	}
 }

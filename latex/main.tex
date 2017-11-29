@@ -1,0 +1,58 @@
+\documentclass[a4paper]{resume}
+
+\input{profile.inc}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+% SIDEBAR
+%----------------------------------------------------------------------------------------
+
+\begin{tikzpicture}[remember picture, overlay]
+    \node [rectangle, fill=cv-dark-grey, minimum width=7cm, minimum height=\paperheight, anchor=north west] (box) at (current page.north west) {};
+    \node [rectangle, fill=cv-black, minimum width=7cm, minimum height=7cm, anchor=north west] (box) at (current page.north west) {};
+\end{tikzpicture}
+
+\begin{textblock}{6}(0.5, 0.5)
+    \begin{center}
+	\sbprofile
+
+	\sbname
+
+	\sbjobtitle
+    \end{center}
+\end{textblock}
+
+\begin{textblock}{5.5}(0.75, 7.75)
+    \sbcontact
+    
+    \sbsection{Education}\\
+    \cvdegrees
+    
+    \sbsection{Languages}\\
+    \begin{tabular}{l}
+        \cvlanguages
+    \end{tabular}
+    
+    \sbsection{Interests}\\
+    \begin{tabular}{l}
+        \cvinterests
+    \end{tabular}
+\end{textblock}
+
+%----------------------------------------------------------------------------------------
+% MAIN CONTENT
+%----------------------------------------------------------------------------------------
+
+\begin{textblock}{12.5}(7.75, 0)
+    \cvsection{\faUser}{Career Profile}
+    \cvabout
+    
+    \cvsection{\faBriefcase}{Working Experiences}
+    \cvexperiences
+    
+    \cvsection{\faCog}{Skills \& Proficiency}
+    \cvskills
+        
+    \end{textblock}
+\end{document} 
