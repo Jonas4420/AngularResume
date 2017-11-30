@@ -1,2 +1,1 @@
 1. Refactoring of LESS style
-2. Script to create LaTeX from JSON

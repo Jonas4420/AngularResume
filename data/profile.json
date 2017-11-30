@@ -1,41 +1,38 @@
 {
-	"firstname"   : "John",
-	"name"        : "Doe",
+	"picture"  : "images/profile.png",
+	"name"     : "John Doe",
+	"jobtitle" : "Current Position",
 
-	"picture"     : "images/profile.png",
-	"email"       : "john.doe@email.com",
-	"phone"       : "+01 (0)01\u20112345\u20116789",
-	"address"     : "Address line",
-	"city"        : "City",
-	"zipcode"     : "012\u20133456",
-	"country"     : "Country",
+	"email"    : "john.doe@email.com",
+	"phone"    : "+01 (0)01\u20132345\u20136789",
+	"address"  : "Address line",
+	"city"     : "City 012\u20133456",
+	"country"  : "Country",
+	"linkedin" : "linkedin.com/in/john-doe",
+	"github"   : "github.com/johndoe",
 
-	"linkedin"    : "linkedin.com/in/john-doe",
-	"github"      : "github.com/johndoe",
-
-	"description" : "Current Position",
-	"summary"     : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit elit vitae egestas ornare. Sed sem quam, commodo in accumsan sed, eleifend vel nulla. Nullam non pulvinar enim. Pellentesque mi ligula, viverra et enim quis, sollicitudin pellentesque lorem.",
-
-	"education"   : [
+	"education" : [
 		{
 			"name"       : "Degree 1",
-			"university" : "University 1",
-			"location"   : "City, Country",
 			"grade"      : "grade",
+			"university" : "University 1",
+			"location"   : "City",
+			"country"    : "Country",
 			"start"      : "1990",
 			"end"        : "1992"
 		},
 		{
 			"name"       : "Degree 2",
-			"university" : "University 2",
-			"location"   : "City, Country",
 			"grade"      : "no honors",
+			"university" : "University 2",
+			"location"   : "City",
+			"country"    : "Country",
 			"start"      : "1980",
 			"end"        : "1983"
 		}
 	],
 
-	"languages"   : [
+	"languages" : [
 		{
 			"name"  : "LanguageA",
 			"level" : "Native language"
@@ -46,13 +43,15 @@
 		}
 	],
 
-	"interests"   : [
+	"interests" : [
 		"Hobby1",
 		"Hobby2",
 		"Hobby3",
 		"Hobby4",
 		"Hobby5"
 	],
+
+	"about" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit elit vitae egestas ornare. Sed sem quam, commodo in accumsan sed, eleifend vel nulla. Nullam non pulvinar enim. Pellentesque mi ligula, viverra et enim quis, sollicitudin pellentesque lorem.",
 
 	"experiences" : [
 		{
@@ -95,7 +94,7 @@
 		}
 	],
 
-	"skills"      : [
+	"skills" : [
 		{
 			"name"  : "Category 1",
 			"items" : [
