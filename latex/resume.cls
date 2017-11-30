@@ -72,6 +72,11 @@
 \setlength{\parindent}{0pt}
 \setlength{\tabcolsep}{0em}
 
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
 %----------------------------------------------------------------------------------------
 % SIDEBAR DEFINITIONS
 %----------------------------------------------------------------------------------------
